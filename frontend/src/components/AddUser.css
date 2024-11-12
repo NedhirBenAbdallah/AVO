@@ -1,0 +1,126 @@
+/* AddUser.css */
+.user {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .card {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+  }
+  
+  .card-header {
+    border-bottom: none;
+  }
+  
+  .form-floating {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+  
+  .form-control-lg {
+    height: calc(3.5rem + 2px);
+    padding: 1rem 1.25rem;
+  }
+  
+  .btn-lg {
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+  }
+  
+  /* Responsive Breakpoints */
+  @media (max-width: 1200px) {
+    .container {
+      max-width: 95%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .card {
+      margin: 1rem;
+    }
+    
+    .card-body {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+    
+    .card-header {
+      padding: 1.5rem;
+    }
+    
+    .form-control-lg {
+      height: calc(3rem + 2px);
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+    }
+    
+    .btn-lg {
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .card {
+      margin: 0.5rem;
+      border-radius: 10px;
+    }
+    
+    .card-body {
+      padding: 1rem;
+    }
+    
+    .form-floating {
+      margin-bottom: 1rem;
+    }
+    
+    .container {
+      padding: 0.5rem;
+    }
+  }
+  
+  /* Touch Device Optimization */
+  @media (hover: none) {
+    .btn-primary:hover {
+      transform: none;
+      box-shadow: none;
+    }
+    
+    .form-control:focus {
+      box-shadow: none;
+    }
+  }
+  

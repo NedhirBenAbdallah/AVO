@@ -1,0 +1,22 @@
+/* AnalyticsModal.css */
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal.show {
+    display: block;
+  }
+  
+  .modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+  
+  .btn-lg {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .btn i {
+    font-size: 1.2rem;
+  }

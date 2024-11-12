@@ -1,0 +1,23 @@
+/* CauseArretChart.css */
+.chart-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .chart-wrapper {
+    position: relative;
+    margin: auto;
+    height: 400px;
+  }
+  
+  .filters-container {
+    margin-bottom: 20px;
+  }
+  
+  .card-body {
+    overflow: hidden;
+  }
+  
+  .form-control {
+    margin-bottom: 10px;
+  }

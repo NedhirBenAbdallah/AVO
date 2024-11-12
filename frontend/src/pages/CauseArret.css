@@ -1,0 +1,19 @@
+/* Add to CauseArret.css */
+.form-floating {
+    margin-bottom: 1rem;
+  }
+  
+  .form-control-lg {
+    height: calc(3.5rem + 2px);
+  }
+  
+  .card {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      margin: 1rem;
+    }
+  }

@@ -1,0 +1,36 @@
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100vh; 
+}
+
+.login-container {
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; 
+}
+
+.login-container{
+  max-width: 600px;
+}
+
+.btn-login{
+  background-color: #076eaf;
+    font-weight: 600;
+    font-family: monospace;
+    padding: 6Px 30px;
+    font-size: 18px;
+    transform: translateX(-50%);
+    margin-left: 50%;
+}
+.bg-image{
+  position: absolute;
+  background-image: url(https://www.avocarbon.com/wp-content/uploads/2022/11/image-principale-page-accueil-propo-2-scaled-1.jpg);
+  height: 100%;
+  top: 0;
+  width: 100%;
+  left: 0;
+  object-fit: cover;
+}
