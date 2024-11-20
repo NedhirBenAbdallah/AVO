@@ -1,8 +1,8 @@
-/* sideBar.css */
+    /* sideBar.css */
 .sidebar {
     width: 280px;
     height: 100vh;
-    background: #fff;
+    background: #f4f5ff;
     transition: all 0.3s ease;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     position: fixed;
@@ -24,7 +24,7 @@
 }
 
 .nav-link {
-    color: #6c757d;
+    color: #325be1;
     transition: all 0.2s ease;
     white-space: nowrap;
     overflow: hidden;

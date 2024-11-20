@@ -1,0 +1,29 @@
+.efficiency-widget .card-header {
+    background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+  }
+  
+  .efficiency-widget .chart-container {
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+  }
+  
+  .efficiency-widget .chart-container:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+  }
+  
+  .efficiency-widget .breadcrumb {
+    margin-bottom: 0;
+  }
+  
+  .efficiency-widget .breadcrumb-item .btn-link {
+    color: #6c757d;
+  }
+  
+  .efficiency-widget .breadcrumb-item .btn-link:hover {
+    color: #0d6efd;
+  }
+  
+  .efficiency-widget .form-select:focus,
+  .efficiency-widget .input-group-text {
+    box-shadow: none;
+  }

@@ -172,39 +172,30 @@ const AdminDashboard = () => {
   return (
     <div className="admin-dashboard container-fluid">
     <div className="dash-layout">
-      <div className="row ">
+      <div className="row">
         <SideBar />
+
         {location.pathname.includes('/admin') && (
           <div className="col main-body">
-            {/* <button onClick={navigateToAnalytics} className="btn btn-primary dashboard-btn mb-4">
-              <img src={`${process.env.PUBLIC_URL}/anlytics.png`} alt="Profile" className="dashboard-btn-img" />
-              Anlytics
-            </button> */}
-
             <button onClick={handleAnalyticsClick} className="btn btn-primary dashboard-btn mb-4">
               <img src={`${process.env.PUBLIC_URL}/anlytics.png`} alt="Profile" className="dashboard-btn-img" />
-              Anlytics
+              Analytics
             </button>
             <AnalyticsModal show={showAnalyticsModal} handleClose={handleCloseModal} />
-            
+
             <div className="row">
               {/* Total Users Card */}
               <div className="col-md-4">
                 <div className="card text-white bg-primary mb-3 dashboard-card">
                   <div className="card-header">
-                  <i className="bi bi-people me-3"></i>
-                  Total Users
+                    <i className="bi bi-people me-3"></i>
+                    Total Users
                   </div>
                   <div className="card-body">
-                    <h5 className="card-title">There is currently <strong>{userCount} users</strong></h5> {/* Display just the number */}
+                    <h5 className="card-title">There are currently <strong>{userCount} users</strong></h5>
                   </div>
                 </div>
               </div>
-
-              <div>
-    {/* Other components and elements */}
-
-  </div>
 
               {/* CauseArret Card */}
               <div className="col-md-4">
@@ -215,7 +206,6 @@ const AdminDashboard = () => {
                   </div>
                   <div className="card-body">
                     <h5 className="card-title">View All CauseArret</h5>
-                    <p className="card-text">See all CauseArret records.</p>
                     <button onClick={fetchCauseArrets} className="btn btn-light">View CauseArret</button>
                   </div>
                 </div>
@@ -225,12 +215,11 @@ const AdminDashboard = () => {
               <div className="col-md-4">
                 <div className="card text-white bg-info mb-3 dashboard-card">
                   <div className="card-header">
-                  <i className="bi bi-file-earmark-text-fill me-3"></i>
-                  Track
+                    <i className="bi bi-file-earmark-text-fill me-3"></i>
+                    Track
                   </div>
                   <div className="card-body">
                     <h5 className="card-title">View All Track</h5>
-                    <p className="card-text">See all Track records.</p>
                     <button onClick={fetchTracks} className="btn btn-light">View Tracks</button>
                   </div>
                 </div>
@@ -273,20 +262,20 @@ const AdminDashboard = () => {
                   <table className="table table-striped table-bordered table-hover text-center align-middle table-sm">
                     <thead className="table-primary">
                       <tr>
-                        <th onClick={() => requestSort('id')}></th>
-                        <th onClick={() => requestSort('date_start')}>Start Date</th>
-                        <th onClick={() => requestSort('capacity')}>capacity</th>
-                        <th onClick={() => requestSort('day_name')}>Day</th>
-                        <th onClick={() => requestSort('h_paye')}>Paye</th>
-                        <th onClick={() => requestSort('title')}>Ligne</th>
-                        <th onClick={() => requestSort('qt')}>Quantity</th>
-                        <th onClick={() => requestSort('week_number')}>Week number</th>
+                        <th>#</th>
+                        <th>Start Date</th>
+                        <th>Capacity</th>
+                        <th>Day</th>
+                        <th>Paye</th>
+                        <th>Ligne</th>
+                        <th>Quantity</th>
+                        <th>Week Number</th>
                       </tr>
                     </thead>
                     <tbody>
                       {currentTracks.map((track, index) => (
                         <tr key={track.id}>
-                          <td>{indexOfFirstTrack + index + 1}</td>
+                          <td>{index + 1}</td>
                           <td>{formatDate(track.date_start)}</td>
                           <td>{track.capacity}</td>
                           <td>{track.day_name}</td>
@@ -300,8 +289,8 @@ const AdminDashboard = () => {
                   </table>
                   <nav>
                     <ul className="pagination">
-                      {Array.from({ length: Math.ceil(filteredTracks.length / tracksPerPage) }, (_, i) => (
-                        <li key={i + 1} className="page-item">
+                      {Array.from({ length: Math.ceil(filteredTracks.length / tracksPerPage) }).map((_, i) => (
+                        <li key={i} className="page-item">
                           <a onClick={() => paginateTracks(i + 1)} href="#!" className="page-link">
                             {i + 1}
                           </a>
@@ -323,17 +312,17 @@ const AdminDashboard = () => {
                   <table className="table table-striped table-bordered table-hover text-center align-middle table-sm">
                     <thead className="table-success">
                       <tr>
-                        <th></th>
-                        <th onClick={() => requestSortCause('date_cause')}>Date</th>
-                        <th onClick={() => requestSortCause('causearret')}>Cause</th>
-                        <th onClick={() => requestSortCause('service')}>Service</th>
-                        <th onClick={() => requestSortCause('minutearret')}>Minute Arret</th>
+                        <th>#</th>
+                        <th>Date</th>
+                        <th>Cause</th>
+                        <th>Service</th>
+                        <th>Minute Arret</th>
                       </tr>
                     </thead>
                     <tbody>
                       {currentCauseArrets.map((causeArret, index) => (
                         <tr key={causeArret.id}>
-                          <td>{indexOfFirstCauseArret + index + 1}</td>
+                          <td>{index + 1}</td>
                           <td>{formatDate(causeArret.date_cause)}</td>
                           <td>{causeArret.causearret}</td>
                           <td>{causeArret.service}</td>
@@ -344,8 +333,8 @@ const AdminDashboard = () => {
                   </table>
                   <nav>
                     <ul className="pagination">
-                      {Array.from({ length: Math.ceil(causeArrets.length / causeArretsPerPage) }, (_, i) => (
-                        <li key={i + 1} className="page-item">
+                      {Array.from({ length: Math.ceil(causeArrets.length / causeArretsPerPage) }).map((_, i) => (
+                        <li key={i} className="page-item">
                           <a onClick={() => paginateCauseArrets(i + 1)} href="#!" className="page-link">
                             {i + 1}
                           </a>
@@ -358,15 +347,17 @@ const AdminDashboard = () => {
             )}
           </div>
         )}
+
         {location.pathname.includes('/user') && (
           <div className="col main-body">
             <h1>User Dashboard</h1>
           </div>
         )}
       </div>
-      </div>
     </div>
-  );
+  </div>
+);
 };
+
 
 export default AdminDashboard;
